@@ -19,7 +19,7 @@ extension UIView {
 
 extension UITableView {
     static let globalAssociation: [IsTableCellWithReuseID.Type] = [
-        
+        CellWith<CharacterCardView>.self,
     ]
     
     func register(cellClass: IsTableCellWithReuseID.Type) {
