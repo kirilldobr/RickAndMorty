@@ -17,6 +17,8 @@
 		4256127E261F3A330019D2DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4256127D261F3A330019D2DE /* Extensions.swift */; };
 		42561281261F3A610019D2DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42561280261F3A610019D2DE /* View.swift */; };
 		4256128C261F3AE70019D2DE /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4256128B261F3AE70019D2DE /* TableView.swift */; };
+		42561290261F3C000019D2DE /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4256128F261F3C000019D2DE /* Character.swift */; };
+		42561293261F3D260019D2DE /* AliveStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42561292261F3D260019D2DE /* AliveStatus.swift */; };
 		DA20BDAB34C873C446B62525 /* Pods_RickAndMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE6F25E535BB75A964FFD0D /* Pods_RickAndMorty.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		4256127D261F3A330019D2DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		42561280261F3A610019D2DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4256128B261F3AE70019D2DE /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		4256128F261F3C000019D2DE /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		42561292261F3D260019D2DE /* AliveStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveStatus.swift; sourceTree = "<group>"; };
 		4F5771A5C8F574A15970F552 /* Pods-RickAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.release.xcconfig"; sourceTree = "<group>"; };
 		E06B14FDA2BDBB24CC3A804E /* Pods-RickAndMorty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				42561270261F39950019D2DE /* ViewModel.swift */,
+				4256128E261F3BEE0019D2DE /* Models */,
 			);
 			path = "Core Layer";
 			sourceTree = "<group>";
@@ -108,6 +113,15 @@
 				4256128B261F3AE70019D2DE /* TableView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4256128E261F3BEE0019D2DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4256128F261F3C000019D2DE /* Character.swift */,
+				42561292261F3D260019D2DE /* AliveStatus.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4BF7DE2647B063AEDCA3FB09 /* Pods */ = {
@@ -240,6 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42561290261F3C000019D2DE /* Character.swift in Sources */,
+				42561293261F3D260019D2DE /* AliveStatus.swift in Sources */,
 				42561276261F39D80019D2DE /* ViewController.swift in Sources */,
 				4256127E261F3A330019D2DE /* Extensions.swift in Sources */,
 				4256124E261F36E20019D2DE /* AppDelegate.swift in Sources */,
