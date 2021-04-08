@@ -22,3 +22,23 @@ struct Character: Codable {
         case species
     }
 }
+
+struct CharactersWithInfo: Codable {
+    let info: Info
+    let characters: [Character]
+    
+    enum CodingKeys: String, CodingKey {
+        case info
+        case characters = "results"
+    }
+}
+
+struct Info: Codable {
+    let pages: Int
+    let nextPageURL: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case pages
+        case nextPageURL = "next"
+    }
+}

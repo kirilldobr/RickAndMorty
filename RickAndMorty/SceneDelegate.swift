@@ -15,6 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        NetworkManager.shared.getAllCharacters()
+        
         let vc = UIViewController()
         vc.view.backgroundColor = .blue
         let navigationController = UINavigationController(rootViewController: vc)
