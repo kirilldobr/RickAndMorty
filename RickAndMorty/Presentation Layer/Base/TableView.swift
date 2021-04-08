@@ -5,6 +5,7 @@
 //  Created by Kirill Dobryakov on 08.04.2021.
 //
 
+
 import EasyPeasy
 import RxCocoa
 import RxDataSources
@@ -37,7 +38,8 @@ class TableView<Model: TableViewModel>: BaseView<Model> {
         tableView.backgroundColor = .white
         
         addSubview(tableView, layout: Edges())
-    
+        
+        tableView.rowHeight = 75
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         tableView.addSubview(refreshControl)
     }

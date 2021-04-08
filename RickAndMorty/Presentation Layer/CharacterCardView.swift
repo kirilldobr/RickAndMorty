@@ -5,6 +5,7 @@
 //  Created by Kirill Dobryakov on 08.04.2021.
 //
 
+
 import Foundation
 import UIKit
 import EasyPeasy
@@ -23,20 +24,26 @@ class CharacterCardViewModel: ViewModel {
     }
 }
 
-
 class CharacterCardView: BaseView<CharacterCardViewModel> {
     let nameLabel = UILabel()
+    let imageView = UIImageView()
     
     override func setModel(_ model: CharacterCardViewModel) {
-        super.setModel(model)
-        
         nameLabel.text = model.name
+        imageView.kf.setImage(with: URL(string: model.imageURL))
     }
-    
     
     override func didLoad() {
         super.didLoad()
         
-        addSubview(nameLabel, layout: Edges())
+        addSubview(imageView, layout: CenterY(), Left(8), Size(60))
+        
+        addSubview(nameLabel, layout: Left(8).to(imageView), CenterY(), Right(8))
+            
+        imageView.contentMode = .scaleAspectFill
+        nameLabel.textColor = .black
+        nameLabel.numberOfLines = 0
     }
 }
+
+

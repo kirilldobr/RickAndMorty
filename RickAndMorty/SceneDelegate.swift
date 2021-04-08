@@ -10,15 +10,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    lazy var characterListViewModel = CharacterListViewModel()
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        NetworkManager.shared.getAllCharacters()
+        //NetworkManager.shared.getAllCharacters()
         
         
-        let characterListViewModel = CharacterListViewModel()
-        let characterListViewController = CharacterListViewcontroller()
+        
+        let characterListViewController = CharacterListViewController()
         characterListViewController.setModel(characterListViewModel)
         
         let navigationController = UINavigationController(rootViewController: characterListViewController)
