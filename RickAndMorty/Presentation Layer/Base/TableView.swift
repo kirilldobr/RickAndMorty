@@ -45,6 +45,8 @@ class TableView<Model: TableViewModel>: BaseView<Model> {
     override func setModel(_ viewModel: Model) {
         super.setModel(viewModel)
         
+        UITableView.globalAssociation.forEach { tableView.register(cellClass: $0) }
+        
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, ViewModel>>(configureCell: { (_, tableView, indexPath, model) -> UITableViewCell in
             
             let cellReuseIdentifier = String(describing: type(of: model))

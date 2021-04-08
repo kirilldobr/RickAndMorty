@@ -15,3 +15,14 @@ extension UIView {
         view.easy.layout(attributes)
     }
 }
+
+
+extension UITableView {
+    static let globalAssociation: [IsTableCellWithReuseID.Type] = [
+        
+    ]
+    
+    func register(cellClass: IsTableCellWithReuseID.Type) {
+        register(cellClass.self, forCellReuseIdentifier: cellClass.cellReuseIdentifier)
+    }
+}
