@@ -13,32 +13,6 @@ import UIKit
 
 typealias ViewWithModel = UIView & HasViewModel
 
-class BaseCell<Model: ViewModel>: UITableViewCell, HasViewModel, HasDisposeBag {
-    let aliveDisposeBag = DisposeBag()
-    var disposeBag = DisposeBag()
-    
-    func setModel(_: Model) {
-        disposeBag = DisposeBag()
-    }
-    
-    func didLoad() {}
-    
-    required convenience init() {
-        self.init(style: .default, reuseIdentifier: nil)
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        didLoad()
-    }
-    
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-
-
 class CellWith<V: ViewWithModel>: UITableViewCell, HasAnyViewModel, HasReuseID {
     static var cellReuseIdentifier: String {
         return String(describing: V.Model.self)
